@@ -1,0 +1,385 @@
+ .container_index {
+ 	width: 100%;
+ 	margin: 0 auto;
+ 	/*background-color: #EEEEEE;*/
+ }
+ 
+ * {
+ 	/*touch-action: none;*/
+ }
+ 
+ a {
+ 	text-decoration: none;
+ 	out-line: none;
+ }
+ 
+ img {
+ 	max-width: 100%;
+ }
+ 
+ div {
+ 	cursor: default;
+ }
+ 
+ .image_border{
+ 	border: 1px solid rgba(0,0,0,.125);
+ }
+ 
+ [v-cloak] {
+ 	display: none!important;
+ }
+ /*媒体查询：注意and后面空格的添加*/
+
+
+
+
+ /*iphone: w < 768px*/
+ 
+ @media screen and (max-width: 768px) {
+ 	.container_index {
+ 		width: 100%;
+ 		/*background-color: #EEEEEE;*/
+ 	}
+ 	.js_txt span {
+ 		font-size: 0.4em!important;
+ 	}
+ 	.slide_txt span {
+ 		font-size: 0.4em!important;
+ 	}
+ 	.case_padding {
+ 		padding: 0 10px;
+ 	} 	
+ }
+ 
+ 
+ @media only screen and (min-width: 992px) {
+ 		
+ 	.home_module h2{
+ 		font-size: 1em!important;
+ 	}
+ 	.home_module div div{		
+		margin: 5% 20px!important;
+ 	}
+ }
+ 
+ /*pad: w >= 768  && w< 992*/
+ 
+ @media screen and (max-width: 992px) and (min-width: 768px) {
+ 	.container_index {
+ 		/*width: 750px;*/
+ 		width: 100%;
+ 		/*background-color: #E0E0E0;*/
+ 	}
+ 	.js_txt span {
+ 		font-size: 0.5em!important;
+ 	}
+ 	.slide_txt span {
+ 		font-size: 0.5em!important;
+ 	}
+ 	.case_padding {
+ 		padding: 0 10px;
+ 	}
+ 	.slide_state h1 {
+ 		line-height: 30px!important;
+ 		font-size: 0.875em!important;
+ 		padding: 0 0%!important;
+ 	}
+ 	.slide_state h6 {
+		line-height: 24px!important;
+ 		padding: 1% 20%!important;
+ 		font-size: 0.35em!important;
+ 	}
+ 	.slide_logo{
+ 		width: 60%;
+ 	}
+ 	.footer_icon_wx{
+ 		width: 6%;
+ 	}
+ 	.footer_icon_qq{
+ 		width: 6%;
+ 	}
+ 	.sharing_js_pc{
+ 		height: 130px;
+    	line-height: 130px;
+ 	}
+ 	.home_module h2{
+ 		font-size: 1em!important;
+ 	}
+ 	.home_module div div{		
+		margin: 5% 20px!important;
+ 	}
+ 	
+ 	.case_caption_pc p{
+ 		font-size: 1.5em!important;
+ 	}
+ 	
+ 	.case_main_pc {
+ 		margin-top: -12%!important;
+ 	}
+ 	.z-bge-height{
+ 		height: 550px!important;
+ 	}
+ 	
+ }
+ 
+ @media (min-width: 1024px) {
+ 	.case_padding {
+ 		padding: 0 10px;
+ 	}
+	.js_txt span {
+ 		font-size: 0.6em!important;
+ 	}
+ 	.slide_txt span {
+ 		font-size: 0.6em!important;
+ 	}
+ 	.slide_state h1 {
+ 		padding: 0 0!important;
+		line-height: 30px!important;
+ 		font-size: 0.67em!important;
+ 	}
+ 	.slide_state h6 {
+ 		padding: 1% 28%!important;
+		line-height: 24px!important;
+ 		font-size: 0.4em!important;
+ 	}
+ 	.header_logo{
+ 		width: 100%;
+ 	}
+ 	.slide_logo{
+ 		width: 45%;
+ 	}
+ 	.footer_icon_wx{
+ 		width: 6%;
+ 	}
+ 	.footer_icon_qq{
+ 		width: 6%;
+ 	}
+ 	.sharing_js_pc{
+ 		height: 130px;
+    	line-height: 130px;
+ 	}
+ 	.home_module h2{
+ 		font-size: 1em!important;
+ 	}
+ 	.home_module div div{		
+		margin: 0 35px!important;
+ 	}
+ 	
+ 	.case_caption_pc p{
+ 		font-size: 1.5em!important;
+ 	}
+ 	
+ 	.case_main_pc {
+ 		margin-top: -12%!important;
+ 	}
+ 	
+ 	.z-container-wrapper {
+ 		padding: 3% 10%!important;
+ 	}	
+ }
+ /*>=1024的设备*/
+ 
+ @media (min-width: 1100px) {
+ 	.case_padding {
+ 		padding: 0 15px;
+ 	}
+ 	.header_logo{
+ 		width: 60%;
+ 	}
+ 	.slide_logo{
+ 		width: 40%;
+ 	}
+ 	.footer_icon_wx{
+ 		width: 10%;
+ 	}
+ 	.footer_icon_qq{
+ 		width: 10%;
+ 	}
+ 	.sharing_js_pc{
+ 		height: 140px;
+    	line-height: 140px;
+ 	}	
+ }
+ /*>=1024的设备*/
+ 
+ @media (min-width: 1280px) {
+ 	.case_padding {
+ 		padding: 0 20px;
+ 	}
+ }
+ 
+ @media (min-width: 1366px) {
+ 	.case_padding {
+ 		padding: 0 25px;
+ 	}
+ }
+ 
+ @media (min-width: 1440px) {
+ 	.container_index {
+ 		/*width: 970px;*/
+ 		width: 100%;
+ 		/*background-color: #BDBDBD;*/
+ 	}
+ 	.js_txt span {
+ 		font-size: 0.6em!important;
+ 	}
+ 	.slide_txt span {
+ 		font-size: 0.6em!important;
+ 	}
+ 	.case_padding {
+ 		padding: 0 30px;
+ 	}
+ 	.slide_state h1 {
+ 		padding: 0 30%!important;
+		line-height: 35px!important;
+ 		font-size: 0.87em!important;
+ 	}
+ 	.slide_state h6 {
+ 		padding: 1% 30%!important;
+ 		font-size: 0.4em!important;
+ 	}
+ 	.header_logo{
+ 		width: 60%;
+ 	}
+ 	.slide_logo{
+ 		width: 35%;
+ 	}
+ 	.footer_icon_wx{
+ 		width: 12%;
+ 	}
+ 	.footer_icon_qq{
+ 		width: 12%;
+ 	}
+ 	.sharing_js_pc{
+ 		height: 150px;
+    	line-height: 150px;
+ 	}
+ 	.home_module h2{
+ 		font-size: 1.2em!important;
+ 	}
+ 	.home_module div div{		
+		margin: 0 50px!important;
+ 	}
+ 	.z-container-wrapper {
+ 		padding: 3% 13%!important;
+ 	}
+ 	.z-bge-height{
+ 		height: 400px!important;
+ 	}
+ }
+ 
+ @media (min-width: 1680px){
+ 	.container_index {
+ 		/*width: 970px;*/
+ 		width: 100%;
+ 		/*background-color: #BDBDBD;*/
+ 	}
+ 	.js_txt span {
+ 		font-size: 0.675em!important;
+ 	}
+ 	.slide_txt span {
+ 		font-size: 0.675em!important;
+ 	}
+ 	.case_padding {
+ 		padding: 0 40px;
+ 	}
+ 	.slide_state h1 {
+ 		padding: 0 32%!important;
+ 		font-size: 1em!important;
+ 	}
+ 	.slide_state h6 {
+ 		padding: 1% 32%!important;
+ 		font-size: 0.45em!important;
+ 	}
+ 	.header_logo{
+ 		width: 60%;
+ 	}
+ 	.slide_logo{
+ 		width: 33%;
+ 	}
+ 	.footer_icon_wx{
+ 		width: 12%;
+ 	}
+ 	.footer_icon_qq{
+ 		width: 12%;
+ 	}
+ 	.sharing_js_pc{
+ 		height: 160px;
+    	line-height: 160px;
+ 	}
+ 	.home_module h2{
+ 		font-size: 1.2em!important;
+ 	}
+ 	.home_module div div{		
+		margin: 0 65px!important;
+		padding: 1% 2%!important;
+ 	}
+ 	.z-container-wrapper {
+ 		padding: 4% 14%!important;
+ 	}
+ 	.z-bge-height{
+ 		height: 500px!important;
+ 	}
+ }
+ 
+ @media (min-width: 1920px) {
+ 	.container_index {
+ 		/*width: 970px;*/
+ 		width: 100%;
+ 		/*background-color: #BDBDBD;*/
+ 	}
+ 	.js_txt span {
+ 		font-size: 0.875em!important;
+ 	}
+ 	.slide_txt span {
+ 		font-size: 0.875em!important;
+ 	}
+ 	.case_padding {
+ 		padding: 0 60px;
+ 	}
+ 	.case_txt {
+ 		padding: 6% 0!important;
+ 	}
+ 	.slide_state h1 {
+ 		padding: 0 35%!important;
+ 		font-size: 1.3em!important;
+ 	}
+ 	.slide_state h6 {
+ 		padding: 1% 35%!important;
+ 		font-size: 0.5em!important;
+ 		line-height: 30px!important;
+ 	}
+ 	.header_logo{
+ 		width: 50%;
+ 	}
+ 	.slide_logo{
+ 		width: 25%;
+ 	}
+ 	.footer_icon_wx{
+ 		width: 12%;
+ 	}
+ 	.footer_icon_qq{
+ 		width: 12%;
+ 	}
+ 	.sharing_js_pc{
+ 		height: 180px;
+    	line-height: 180px;
+ 	}
+ 	.home_module h2{
+ 		font-size: 1.3em!important;
+ 	}
+ 	.home_module div div{		
+		margin: 0 80px!important;
+		padding: 2% 2%!important;
+ 	}
+ 	.z-container-wrapper img{		
+		padding-left: 20px!important;
+		padding-right: 20px!important;
+ 	}
+ 	.z-container-wrapper {
+ 		padding: 4% 15%!important;
+ 	}
+ 	.z-bge-height{
+ 		height: 600px!important;
+ 	}
+ }

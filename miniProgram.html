@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="styles/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/css/adaptive.css" />
+		<link rel="stylesheet" href="styles/css/global.css" />
+		<link rel="stylesheet" href="styles/css/dynamicChange.css" />
+		<link rel="stylesheet" href="styles/css/animate.css" />
+		<script type="text/javascript" src="js/vue.js"></script>
+		<title>小程序案例</title>
+	</head>
+
+	<body>
+		<div id="app" v-cloak>
+			<div class="container_index">
+				<div class="index_phone" v-if="col == 'mini' || col == 'sm'">
+
+					<header-phone></header-phone>
+
+					<carousel-phone></carousel-phone>
+
+					<!--以下为动态改变数据-->
+					<div class="row no-gutters">
+						<div class="col-12 col-sm col-md col-lg" @click="toCaseOne">
+							<div style="padding: 5% 5%;">
+								<img class="img-fluid image_border" src="images/xcx/ms/xcx_ms_icon.jpg">
+								<div class="row no-gutters justify-content-between case_txt">
+									<span class="col-12 col-sm col-md col-lg">九州民宿</span>
+									<span class="col-12 col-sm col-md col-lg">类型：民宿租房</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-12 col-sm col-md col-lg" @click="toCaseTwo">
+							<div style="padding: 0 5% 5% 5%;">
+								<img class="img-fluid image_border" src="images/icon/xcx_ydz_icon.jpg">
+								<div class="row no-gutters justify-content-between case_txt">
+									<span class="col-12 col-sm col-md col-lg">运动站</span>
+									<span class="col-12 col-sm col-md col-lg">类型：运动健身</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-12 col-sm col-md col-lg" @click="toXcxCaseThree">
+							<div style="padding: 0 5% 5% 5%;">
+								<img class="img-fluid image_border" src="images/icon/xcx_fczj_icon.jpg">
+								<div class="row no-gutters justify-content-between case_txt">
+									<span class="col-12 col-sm col-md col-lg">优选家置业</span>
+									<span class="col-12 col-sm col-md col-lg">类型：房地产类</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-12 col-sm col-md col-lg" @click="toXcxCaseFour">
+							<div style="padding: 0 5% 5% 5%;">
+								<img class="img-fluid image_border" src="images/xcx/yzjz/xcx_yzjz_icon.jpg">
+								<div class="row no-gutters justify-content-between case_txt">
+									<span class="col-12 col-sm col-md col-lg">柚子家政</span>
+									<span class="col-12 col-sm col-md col-lg">类型：家政类</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-12 col-sm col-md col-lg" @click="toXcxCaseFive">
+							<div style="padding: 0 5% 5% 5%;">
+								<img class="img-fluid image_border" src="images/xcx/xcyj/xxc_xcyj_icon.jpg">
+								<div class="row no-gutters justify-content-between case_txt">
+									<span class="col-12 col-sm col-md col-lg">秀程旅居</span>
+									<span class="col-12 col-sm col-md col-lg">类型：旅游类</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-12 col-sm col-md col-lg" @click="toXcxCaseSix">
+							<div style="padding: 0 5% 5% 5%;">
+								<img class="img-fluid image_border" src="images/xcx/ifcha/xcx_ifcha_icon.png">
+								<div class="row no-gutters justify-content-between case_txt">
+									<span class="col-12 col-sm col-md col-lg">IFCha——夫茶</span>
+									<span class="col-12 col-sm col-md col-lg">类型：外卖餐饮类</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<footer-phone></footer-phone>
+				</div>
+				<div class="index_pc" v-else>
+
+					<header-pc></header-pc>
+
+					<!--以下为动态改变数据-->
+					<div class="sharing_case">
+						<div class="row no-gutters">
+							<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" @click="toCaseOne">
+								<div class="case_padding">
+									<img ref="resize_img" @mouseover="shadowNumber = 1" @mouseout="shadowNumber = 0"  v-bind:class="[ shadowNumber == 1 ? 'showShadow' : ''  ]" class="pc_list_img image_border" src="images/xcx/ms/xcx_ms_icon.jpg">
+									<span style="cursor: pointer;" v-bind:style="resizeHeight" @mouseover="shadowNumber = 1" @mouseout="shadowNumber = 0" v-bind:class="[ isShowImgShadowThree == 1 ? 'img_shadow' : 'img_shadow_out'  ]"></span>
+									<div class="row no-gutters justify-content-between case_txt">
+										<span>九州民宿</span>
+										<span>类型：民宿租房类</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" @click="toCaseTwo">
+								<div class="case_padding">
+									<img ref="resize_img" @mouseover="shadowNumber = 2" @mouseout="shadowNumber = 0"  v-bind:class="[ shadowNumber == 2 ? 'showShadow' : ''  ]" class="pc_list_img image_border" src="images/icon/xcx_ydz_icon.jpg">
+									<span style="cursor: pointer;" v-bind:style="resizeHeight" @mouseover="shadowNumber = 2" @mouseout="shadowNumber = 0" v-bind:class="[ isShowImgShadowFour == 2 ? 'img_shadow' : 'img_shadow_out'  ]"></span>
+									<div class="row no-gutters justify-content-between case_txt">
+										<span>运动站</span>
+										<span>类型：运动健身</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" @click="toXcxCaseThree">
+								<div class="case_padding">
+									<img ref="resize_img" @mouseover="shadowNumber = 3" @mouseout="shadowNumber = 0" v-bind:class="[ shadowNumber == 3 ? 'showShadow' : ''  ]" class="pc_list_img image_border" src="images/icon/xcx_fczj_icon.jpg">
+									<span style="cursor: pointer;" v-bind:style="resizeHeight" @mouseover="shadowNumber = 3" @mouseout="shadowNumber = 0" v-bind:class="[ isShowImgShadowFive == 3 ? 'img_shadow' : 'img_shadow_out'  ]"></span>
+									<div class="row no-gutters justify-content-between case_txt">
+										<span>优选家置业</span>
+										<span>类型：房地产类</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" @click="toXcxCaseFour">
+								<div class="case_padding">
+									<img ref="resize_img" @mouseover="shadowNumber = 4" @mouseout="shadowNumber = 0" v-bind:class="[ shadowNumber == 4 ? 'showShadow' : ''  ]" class="pc_list_img image_border" src="images/xcx/yzjz/xcx_yzjz_icon.jpg">
+									<span style="cursor: pointer;" v-bind:style="resizeHeight" @mouseover="shadowNumber = 4" @mouseout="shadowNumber = 0" v-bind:class="[ isShowImgShadowSix == 4 ? 'img_shadow' : 'img_shadow_out'  ]"></span>
+									<div class="row no-gutters justify-content-between case_txt">
+										<span>柚子家政</span>
+										<span>类型：家政类</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" @click="toXcxCaseFive">
+								<div class="case_padding">
+									<img ref="resize_img" @mouseover="shadowNumber = 5" @mouseout="shadowNumber = 0" v-bind:class="[ shadowNumber == 5 ? 'showShadow' : ''  ]" class="pc_list_img image_border" src="images/xcx/xcyj/xxc_xcyj_icon.jpg">
+									<span style="cursor: pointer;" v-bind:style="resizeHeight" @mouseover="shadowNumber = 5" @mouseout="shadowNumber = 0" v-bind:class="[ isShowImgShadowSeven == 5 ? 'img_shadow' : 'img_shadow_out'  ]"></span>
+									<div class="row no-gutters justify-content-between case_txt">
+										<span>秀程旅居</span>
+										<span>类型：旅游类</span>
+									</div>
+								</div>
+							</div>	
+							<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" @click="toXcxCaseSix">
+								<div class="case_padding">
+									<img ref="resize_img" @mouseover="shadowNumber = 6" @mouseout="shadowNumber = 0" v-bind:class="[ shadowNumber == 6 ? 'showShadow' : ''  ]" class="pc_list_img image_border" src="images/xcx/ifcha/xcx_ifcha_icon.png">
+									<span style="cursor: pointer;" v-bind:style="resizeHeight" @mouseover="shadowNumber = 6" @mouseout="shadowNumber = 0" v-bind:class="[ isShowImgShadowEight == 6 ? 'img_shadow' : 'img_shadow_out'  ]"></span>
+									<div class="row no-gutters justify-content-between case_txt">
+										<span>IFCha——夫茶</span>
+										<span>类型：外卖餐饮类</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<footer-pc></footer-pc>
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="styles/js/headerPcHumble.js" ></script>
+		<script type="text/javascript" src="styles/js/slidebar.js" ></script>
+		<script type="text/javascript" src="styles/js/headerPc.js" ></script>
+		<script type="text/javascript" src="styles/js/homePc.js" ></script>
+		<script type="text/javascript" src="styles/js/footerPc.js" ></script>
+		<script type="text/javascript" src="styles/js/homeFooter.js" ></script>
+		<script src="styles/js/myVue.js"></script>			
+		<script type="text/javascript" src="styles/js/vue.min.js" ></script>
+		<script type="text/javascript" src="styles/js/vue-router.min.js" ></script>
+		<script type="text/javascript" src="styles/js/jquery.slim.min.js" ></script>
+		<script type="text/javascript" src="styles/js/popper.min.js" ></script>
+		<script type="text/javascript" src="styles/js/bootstrap.min.js" ></script>
+		<script src="styles/js/myAnimated.js"></script>		
+	</body>
+
+</html>

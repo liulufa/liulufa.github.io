@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="styles/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/css/adaptive.css" />
+		<link rel="stylesheet" href="styles/css/global.css" />
+		<link rel="stylesheet" href="styles/css/dynamicChange.css" />
+		<link rel="stylesheet" href="styles/css/animate.css" />
+		<script type="text/javascript" src="js/vue.js"></script>
+		<title>九州民宿</title>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="container_index">
+				<div class="index_phone" v-if="col == 'mini' || col == 'sm'">
+					<header-phone></header-phone>
+					<div class="case_caption">
+						<p>九州民宿</p>
+					</div>
+					<div class="case_main">
+						<div class="row no-gutters">
+							<div class="col-12 col-sm col-md col-lg">
+								<div class="case_ipad_bg_f">
+									<img ref="ipad_img" class="img-fluid" src="images/icon/ipad_icon.png" />
+									<div class="wow case_ipad_bg_z slideInUp" 
+										v-bind:style="transition_img_top"
+										data-wow-duration="2s"
+										data-wow-offset="0"
+										data-wow-delay=".4s"
+										data-wow-iteration="1">
+										<img ref="ipad_main_img" v-show="show_main_img" class="ipad_main_img" src="images/app/minsu/minsu-app-6.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contain_module">
+						<span>九州民宿</span>
+					</div>
+					<div class="case_contain">
+						<div class="row no-gutters text-center">	
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-9.jpg" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-2.png" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-3.jpg" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-4.jpg" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-5.jpg" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-7.jpg" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-8.jpg" />
+							</div>
+							<div class="col-12 col-sm col-md col-lg">
+								<img class="img-fluid contain_img" src="images/app/minsu/minsu-app-1.jpg" />
+							</div>
+						</div>
+					</div>
+					
+					<footer-phone></footer-phone>
+				</div>
+				<div class="index_pc" v-else>
+					
+					<header-pc-humble></header-pc-humble>
+					
+					<slide-pc></slide-pc>
+					
+					<div class="case_caption_pc">
+						<div class="pc_caption_hd" v-bind:class="[ col == 'mini' || col == 'sm'  ? 'i_info_textAlgin' : '' ]">
+							<div class="row no-gutters align-items-center">
+								<div class="col-12 col-sm col-md col-lg" style="text-align: left;">
+									<img @click="toHome" class="img-fluid slide_logo" src="images/logo/dlr.png" />
+								</div>
+								<div style="text-align: right;" class="col-6 col-md-8 col-lg-8 slide_txt">
+									<span>网站建设</span>
+									<span @click="toIndex">网站案例</span>
+									<span @click="toMiniProgram">小程序</span>
+									<span @click="toAPP">APP</span>
+									<span>公司</span>
+									<span>了解价格</span>
+								</div>
+							</div>
+						</div>
+						<p class="align-text-bottom text-left">九州民宿</p>
+					</div>
+					<div class="case_main_pc">
+						<div class="row no-gutters">
+							<div class="col-12 col-sm col-md col-lg">
+								<div class="case_ipad_bg_f">
+									<img ref="ipad_img" class="img-fluid" src="images/icon/ipad_icon.png" />
+									<div class="wow case_ipad_bg_z slideInUp" 
+										v-bind:style="transition_img_top"
+										data-wow-duration="2s"
+										data-wow-offset="0"
+										data-wow-delay=".4s"
+										data-wow-iteration="1">
+										<img ref="ipad_main_img" v-show="show_main_img" class="ipad_main_img" src="images/app/minsu/minsu-app-6.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contain_module">
+						<span>九州民宿</span>
+					</div>
+					<div class="case_contain">
+						<div class="row no-gutters text-center contain_case_img">	
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-9.jpg" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-2.png" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-3.jpg" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-4.jpg" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-5.jpg" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-7.jpg" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-8.jpg" />
+							</div>
+							<div class="col-12">
+								<img class="img-fluid" src="images/app/minsu/minsu-app-1.jpg" />
+							</div>
+						</div>
+					</div>
+
+					<footer-pc></footer-pc>
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="styles/js/headerPcHumble.js" ></script>
+		<script type="text/javascript" src="styles/js/slidebar.js" ></script>
+		<script type="text/javascript" src="styles/js/headerPc.js" ></script>
+		<script type="text/javascript" src="styles/js/homePc.js" ></script>
+		<script type="text/javascript" src="styles/js/footerPc.js" ></script>
+		<script type="text/javascript" src="styles/js/homeFooter.js" ></script>
+		<script src="styles/js/myVue.js"></script>			
+		<script type="text/javascript" src="styles/js/vue.min.js" ></script>
+		<script type="text/javascript" src="styles/js/vue-router.min.js" ></script>
+		<script type="text/javascript" src="styles/js/jquery.slim.min.js" ></script>
+		<script type="text/javascript" src="styles/js/popper.min.js" ></script>
+		<script type="text/javascript" src="styles/js/bootstrap.min.js" ></script>
+		<script src="styles/js/myAnimated.js"></script>
+		<script type="text/javascript" src="styles/js/wow.min.js"></script>
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+	</body>
+</html>
